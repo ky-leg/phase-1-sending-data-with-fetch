@@ -24,6 +24,7 @@ function submitData(userName, userEmail) {
         document.body.append(object.id);
     })
     .catch(function (error) {
-        document.body.append(error)
+        console.log (error)
+        document.body.append(error.message)
     })
 }
