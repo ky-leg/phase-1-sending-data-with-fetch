@@ -16,7 +16,7 @@ function submitData(userName, userEmail) {
         body: submittedData
     }
     
-    fetch("http://localhost:3000/users", someConfig)
+    return fetch("http://localhost:3000/users", someConfig)
     .then(function (response){
         return response.json();
     })
@@ -25,6 +25,6 @@ function submitData(userName, userEmail) {
     })
     .catch(function (error) {
         console.log (error)
-        document.body.append(error.message)
+        document.body.innerHTML = error.message
     })
 }
